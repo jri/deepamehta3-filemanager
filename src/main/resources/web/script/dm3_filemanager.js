@@ -6,7 +6,7 @@ function dm3_filemanager() {
         canvas.start_grid_positioning()
         //
         for (var i = 0; i < files.get_directory_count(); i++) {
-            get_plugin("dm3_files").create_file_topics(files.get_directory(i))
+            get_plugin("dm3_files").create_file_topics(files.get_directory(i), i == 0)
         }
         for (var i = 0; i < files.get_file_count(); i++) {
             get_plugin("dm3_files").create_file_topic(files.get_file(i))
